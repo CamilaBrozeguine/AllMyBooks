@@ -3,7 +3,7 @@ export const MagicStyle = {
      vermelho_escuro:'#240200',
      nude:'#A56E3F',
      quasebranco:'#F3D0AA',
-     maonzinho: '#572401'
+     maronzinho: '#572401'
     },
     fonts:{
          title: "'Cinzel', sans-serif ",

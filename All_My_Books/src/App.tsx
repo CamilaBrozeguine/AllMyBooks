@@ -2,17 +2,19 @@
 import 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { FavoritesProvider } from './context/FavoritesContext';
-import { useQuery } from './hooks/useQuery';
+import { ThemeProvider } from 'styled-components';
+// import { FavoritesProvider } from './context/FavoritesContext';
+// import { useQuery } from './hooks/useQuery';
+import { MagicStyle } from './styles/MacicStyle';
 
-import Home from '.';
-import Favorites from './pages/favorites';
-import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Favorites from './pages/Favorite';
+import Navbar from './components/NavBar';
 
 
 function App() {
   return (
-      <FavoritesProvider>
+      <ThemeProvider theme={MagicStyle}>
         <Router>
           <Navbar />
           {/* AnimatePresence permite animações na saída de componentes */}
@@ -25,7 +27,7 @@ function App() {
             </Routes>
           </AnimatePresence>
         </Router>
-      </FavoritesProvider>
+      </ThemeProvider>
   );
 }
 

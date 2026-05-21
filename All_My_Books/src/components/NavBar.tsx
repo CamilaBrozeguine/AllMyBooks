@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 const Nav = styled.nav`
   background: ${props => props.theme.colors.maronzinho};

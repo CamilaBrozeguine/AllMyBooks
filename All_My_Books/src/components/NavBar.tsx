@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
   background: ${props => props.theme.colors.maronzinho};
-  padding: 1rem;
+  padding: 1rem;y
   display: flex;
   justify-content: space-between;
   align-items: center;

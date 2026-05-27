@@ -4,6 +4,7 @@ import { Button } from '../components/Button'
 import { useState, Suspense } from 'react'
 import { BookCard } from '../components/bookCard'
 import { Link } from 'react-router-dom'
+import { Input } from '../components/Input'
 
 const Home = () => {
   const [query, setQuery] = useState('')
@@ -37,12 +38,13 @@ const Home = () => {
             gap: '15px',
           }}
         >
-          <input
-            placeholder='Ex: O Hobbit, Alquimia...'
+          <Input
+            placeholder="Ex: O Hobbit, Alquimia..."
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className='p-2 rounded-md'
-          />
+            onChange={(e) => setQuery(e.target.value)}>
+ 
+          </Input>
+          
           <Button type='submit' whileHover={{ scale: 1.05 }}>
             <Suspense fallback='Conjurar'>
               <Search size={18} />
@@ -80,6 +82,8 @@ const Home = () => {
             <h3>{book.volumeInfo.title}</h3>
             <p>{book.volumeInfo.authors?.join(', ')}</p>
             <p><strong>{book.volumeInfo.publishedDate}</strong></p>
+
+            <button className='width: 100% , fontSize : 0'></button>
           </BookCard>
         ))}
       </div>
